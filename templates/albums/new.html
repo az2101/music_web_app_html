@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create New Album</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>New Album</h1>
+        <form action="/albums" method="post">
+
+
+            {% if errors %}
+                <p class="t-errors">
+                    There were errors with your submission: {{errors}}
+                </p>
+            {% endif %}
+
+            <p>
+                <label for="title">Title</label>
+                <br>
+                <input type="text" name="title" id="title">
+            </p>
+            <p>
+                <label for="year">Release Year</label>
+                <br>
+                <input type="text" name="year" id="year">
+            </p>
+            <!-- <p>
+                <label for="artist_name">Artist Name</label>
+                <br>
+                <input type="text" name="artist_name" id="artist_name">
+            </p> -->
+            <p>
+                <input type="submit" value="Create Album">
+            </p>
+        </form>
+    </body>
+</html>

@@ -8,6 +8,8 @@ app = Flask(__name__)
 # == Your Routes Here ==
 
 
+from example_routes import apply_example_routes
+apply_example_routes(app)
 
 # These lines start the server if you run this file directly
 # They also start the server configured to use the test database
